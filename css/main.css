@@ -1,5 +1,5 @@
-body,a,li,ul,h1,h2,h3,h4,h5,h6,p,span,i{
-    margin:0;padding:0;list-style: none;
+body,a,li,ul,h1,h2,h3,h4,h5,h6,p,span,i,input{
+    margin:0;padding:0;list-style: none;border:0;
 }
 a{
     color:#fff;
@@ -8,8 +8,12 @@ a{
 body,html{
     width:100%;height:100%;
     font-size: 13px;
-    font-family: 'Microsoft Sans Serif', Tahoma, Arial, Verdana, Sans-Serif;
+    font-family: "Microsoft Yahei";
     color:#fff;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 body{
     overflow: hidden;
@@ -21,6 +25,10 @@ header{
     position:fixed;
     top:0;left:0;
     z-index: 99;
+    box-shadow: 0px 3px 20px rgba(0,0,0,0.2);
+}
+input{
+    outline:none;
 }
 .header{
     width:1000px;
@@ -39,6 +47,7 @@ header .logo{
     height:40px;
     margin-top: 10px;
     background:url(../images/tp.png) no-repeat 0 0;
+    cursor:pointer;
 }
 .header .middle{
 
@@ -94,11 +103,29 @@ header .logo{
 .header .middle li:hover a{
     color: #67cbff;
 }
+.min{
+    display: none;
+}
+.max{
+    display: block;
+}
+
+
+
+
+
+
+
+.content{
+    overflow: hidden;
+}
 /*************************************/
 .fullpage{
     width:100%;
     height:100%;
     transition:margin 1s ease;
+    position: relative;
+    z-index: 2;
 }
 .fullpage section{
     width:100%;
@@ -119,6 +146,7 @@ header .logo{
 }
 
 .title{
+    display: block;
     position: absolute;
     top: 50%;
     left: 15%;
@@ -167,7 +195,7 @@ header .logo{
     background-image:url("../images/h3-1.png");
     width: 501px;
     height: 158px;
-    left: 185px;
+    left: 13%;
     top: 34%;
 }
 .fullpage section:nth-child(2) .title{
@@ -175,7 +203,6 @@ header .logo{
     margin-top: -121px;
 }
 .fullpage section:nth-child(3) .title{
-    left: 180px;
 
 }
 .fullpage section:nth-child(4) .title{
@@ -213,6 +240,8 @@ header .logo{
     position:absolute;
     right: 208px;
     top: 150px;
+
+    display: block;
 }
 
 .bg-image{
@@ -296,6 +325,7 @@ header .logo{
     background:url("../images/next-page.png")no-repeat 0 0;
     cursor:pointer;
     animation:next-page 1s infinite;
+    z-index: 99;
 }
 @keyframes next-page{
     0%{
@@ -313,6 +343,8 @@ header .logo{
 
     }
 }
+
+
 
 .flooter{
     position:absolute;
@@ -417,8 +449,199 @@ header .logo{
     left: 300px;
     top: -191px;
     position: absolute;
-    transition: all .5s ease-out .3s;
-    -webkit-transition: all .5s ease-out .3s;
+    -webkit-transition: all .5s ease-out .4s;
+    transition: all .5s ease-out .4s;
+}
+
+
+/*动画*/
+
+.title,.side-image{
+    transition:transform .5s ease,opacity .5s ease;
+}
+.side-image{
+}
+
+
+
+/*******************表单*******************/
+.login{
+    width:340px;
+    height:300px;
+    background:#4EBFFC;
+    position: absolute;
+    top: 21%;
+    right: 13%;
+    border-radius: 5px;
+    padding:26px 0 0 0;
+    z-index: 99;
+}
+.login form{
+    padding: 0 20px;
+}
+.user,.password{
+    width:300px;
+    background:#fff;
+}
+.user input,.password input,.code input{
+    width:252px;
+    height:20px;
+    padding:9px;
+    font-size: 14px;
+}
+.user i,.password i {
+    display: inline-block;
+    width:14px;
+    height:14px;
+    background: url("../images/tu.png") no-repeat;
+    margin: 12px 3px 0 10px;
+
+}
+.user i {
+    background-position:-124px -12px;
+}
+.password i {
+    background-position:-141px -12px;
+
+}
+.error{
+    height: 20px;
+    line-height: 20px;
+    vertical-align: top;
+    color: #dd4545;
+    visibility: hidden;
+    font-size: 13px;
+    max-width: 270px;
+    white-space: nowrap;
+    word-wrap: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    margin: 0;
+    text-align: left;
+    cursor:pointer;
+}
+.code{
+    width:300px;
+    overflow: hidden;
+}
+.code input{
+    width:140px;
+    display: block;
+    float: left;
+    height: 22px;
+}
+.code .token{
+}
+.code .token,.code .chang-token {
+    display: block;
+    float: left;
+    margin-left: 10px;
+}
+.code .chang-token{
+    line-height: 39px;
+}
+.code img{
+    display: block;
+}
+.sign{
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-radius-bottomright: 3px;
+    border-bottom-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-bottom-left-radius: 3px;
+}
+.sign input{
+    background:#FFD850;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+    margin-top: 12px;
+    display: block;
+    padding: 0 10px;
+    font-size: 18px;
+    line-height: 35px;
+    text-align: center;
+    vertical-align: middle;
+    color: #5c4c12;
+    border-radius: 2px;
+    width: 299px;
+}
+.sign input:active{
+    box-shadow: 0 3px 2px 1px rgba(0,0,0,0.2) inset;
+
+}
+.other {
+    margin: 12px 0 8px;
+    font-size: 12px;
+    color: #9dbcdb;
+}
+.other .o-left {
+     float: left;
+ }
+.other .o-left i{
+    vertical-align: top;
+    display: inline-block;
+    width:16px;height:18px;
+    background:url("../images/tu.png") no-repeat -204px -74px;
+    
+}
+.other .o-right {
+    float: right;
+}
+.other a:hover{
+    text-decoration:underline;
+}
+
+/************第一屏云****************/
+.fp-img{
+    width:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+}
+.fp-img>div{
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+.fp-img>div>div{
+    position: absolute;
+    left: 0;
+}
+.fp-img>div:nth-child(1){top: 0;}
+.fp-img>div:nth-child(2){top: 50%;}
+.fp-img>div:nth-child(3){bottom: 0;}
+.fp-img>div:nth-child(1)>div{
+    top: 0;
+
+    width:100%;height:1000px;
+    background:url("../images/yun1.png")repeat;
+    animation:yun 100s linear infinite;
+}
+.fp-img>div:nth-child(2)>div{
+    top: -200px;
+    width:100%;height:400px;
+    background:url("../images/yun2.png")repeat;
+    animation:yun 280s linear infinite;
+}
+.fp-img>div:nth-child(3)>div{
+    bottom: 0;
+    width:100%;height:400px;
+    background:url("../images/yun3.png")repeat;
+    animation:yun 600s linear infinite;
+}
+
+@keyframes yun {
+    0%{
+            background-position: 2000px 0;
+    }
+    50%{
+            background-position: 0 0;
+    }
+    100%{
+            background-position: -2000px 0;
+    }
 }
 /***************轮播点************/
 .fp-nav{
@@ -426,6 +649,7 @@ header .logo{
     top:50%;
     right:17px;
     margin-top: -43.5px;
+    z-index: 99;
 }
 .fp-nav li{
     display: block;
@@ -448,4 +672,94 @@ header .logo{
 .fp-nav .active a{
     background:#333;
 }
+/**************相应**************/
 
+
+@media screen and (max-width:1000px){
+    .max{
+        display: none;
+    }
+    .min{
+        width:100%;
+        display: block;
+    }
+
+    .min .menu{
+        cursor:pointer;
+        float:right;
+        margin:17px 20px 0 0;
+    }
+    .menu.active{
+        transform:rotateZ(90deg);
+        transition:transform .3s ease
+    }
+    .menu span{
+        width:23px;height:2px;
+        margin:7px 0px;
+        background:#fff;
+        display: block;
+    }
+    .menu.active span:nth-child(1){
+        transform:translateY(4px) rotateZ(45deg)
+    }
+    .menu.active span:nth-child(2){
+        transform:translateY(-5px) rotateZ(-45deg)
+    }
+
+    .min .middle{
+        background:#000;
+        width:30%;
+        box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        -webkit-box-sizing: border-box;
+        position: absolute;
+        right:0;
+        top:60px;
+        transform: translateX(300px);
+        opacity: 0.3;
+
+    }
+    .min .middle ul{
+        margin: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .min .middle li{
+        float:none;
+        border-bottom:1px solid #fff;
+        opacity: 0;
+        transform:translateX(50px) ;
+    }
+    .min .middle li a{
+        width:100%;
+        padding:15px 0 15px 20px;
+        text-align: left;
+        transform:scale(1.2)
+    }
+
+
+    section:nth-child(1) .title{
+        display: none;
+    }
+    section:nth-child(1) .login{
+        right:0;left:0;margin:auto;
+    }
+    .section .side-image{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:640px){
+    .min .middle {
+        width: 50%;
+    }
+    .fullpage section.section .title{
+        left:5%;
+    }
+}
+@media screen and (max-width:400px){
+    .min .middle {
+        width: 70%;
+    }
+}

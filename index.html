@@ -14,28 +14,49 @@
 </head>
 <body>
 <header>
-    <div class="header">
+    <div class="header max">
         <div class="logo"><a href=""></a></div>
         <div class="middle">
+
             <ul>
                 <li><a href="">首页</a></li>
                 <li><a href="">产品介绍</a></li>
-                <li><a href="" >用户版</a></li>
+                <li><a href="">用户版</a></li>
             </ul>
         </div>
         <div class="help">
             <ul>
-                <li><a href=""class="hidden">登录</a></li>
+                <li><a href="" class="hidden">登录</a></li>
                 <li><a href="">手机客户端<i></i></a></li>
                 <li><a href="">百度司南</a></li>
                 <li><a href="">联系我们</a></li>
-                <li><a href=""class="yellow">申请试用</a></li>
+                <li><a href="" class="yellow">申请试用</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header min">
+        <div class="logo"><a href=""></a></div>
+        <div class="menu">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="middle">
+            <ul>
+                <li><a href="">首页</a></li>
+                <li><a href="">产品介绍</a></li>
+                <li><a href="">用户版</a></li>
+                <li><a href="">登录</a></li>
+                <li><a href="">手机客户端<i></i></a></li>
+                <li><a href="">百度司南</a></li>
+                <li><a href="">联系我们</a></li>
+                <li><a href="">申请试用</a></li>
             </ul>
         </div>
     </div>
 </header>
+<!--<div class="mask"></div>-->
 <div class="fullpage">
-    <section>
+    <section >
         <div class="title">
             <div class="feiji"></div>
         </div>
@@ -45,10 +66,41 @@
             <div class="fore"></div>
             <div class="ship"></div>
         </div>
+        <div class="login">
+            <form action="" id="login">
+                <div class="user">
+                    <i></i><input type="text" name="user" form="login" placeholder="用户名">
+                </div>
+                <p class="error"></p>
+                <div class="password">
+                    <i></i><input type="password" name="password" form="login" placeholder="密码">
+                </div>
+                <p class="error"></p>
 
+                <div class="code">
+                    <input type="password" name="code" form="login" placeholder="验证码">
+                    <div class="token"><img src="images/token.jpg" alt=""></div>
+                    <div class="chang-token"><a href="">换一张</a></div>
+                </div>
+                <p class="error"></p>
+                <div class="sign">
+                    <input type="submit" value="登录" form="login">
+                </div>
+                <div class="other">
+                    <div class="o-left"><i></i><a href="">安全控件常见问题</a></div>
+                    <div class="o-right"><a href="">忘记密码</a></div>
+                </div>
+            </form>
+
+        </div>
+        <div class="fp-img">
+            <div><div></div></div>
+            <div><div></div></div>
+            <div><div></div></div>
+        </div>
         <div class="next-page"><a href=""></a></div>
     </section>
-    <section>
+    <section class="section">
         <div class="content">
             <div class="bg-image"></div>
             <div class="title">
@@ -59,7 +111,6 @@
                 </div>
             </div>
         </div>
-
         <div class="side-image"></div>
         <div class="flooter">
             <div class="fore"></div>
@@ -71,7 +122,7 @@
 
         <div class="next-page"><a href=""></a></div>
     </section>
-    <section>
+    <section class="section">
         <div class="content">
             <div class="bg-image">
                 <div class="fore"></div>
@@ -87,17 +138,14 @@
                     <p>声量诊断、传播分析、情感提炼、受众画像<br>有方法论，更有智慧 </p>
                 </div>
             </div>
-
-
         </div>
         <div class="side-image"></div>
         <div class="flooter">
-
         </div>
         <div class="next-page"><a href=""></a></div>
     </section>
 
-    <section>
+    <section class="section">
         <div class="content">
             <div class="bg-image"></div>
             <div class="title">
@@ -125,5 +173,6 @@
         <li><a href="javascript:;"></a><span></span></li>
     </ul>
 </div>
+
 </body>
 </html>
